@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactical Portal - Second Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Doto:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Doto', sans-serif;
+            background: radial-gradient(circle, rgba(27,27,55,1) 0%, rgba(5,5,27,1) 100%), url('https://images.unsplash.com/photo-1447433819943-74a20887a3c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .input-box {
+            width: 90%;
+            max-width: 400px;
+            height: 200px;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            font-size: 16px;
+            font-family: 'Doto', sans-serif;
+            outline: none;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: #ffffff;
+            resize: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .input-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            font-family: 'Doto', sans-serif;
+        }
+
+        .single-line {
+            height: auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .start-button {
+            width: 200px;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-family: 'Doto', sans-serif;
+            font-weight: bold;
+            background: linear-gradient(135deg, #6d5dfc, #9f85ff);
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .start-button:hover {
+            background: linear-gradient(135deg, #9f85ff, #6d5dfc);
+            transform: scale(1.05);
+        }
+
+        .start-button:active {
+            transform: scale(0.95);
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+            font-family: 'Doto', sans-serif;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <label for="accounts">Accounts</label>
+    <textarea id="accounts" class="input-box" placeholder="Enter accounts here..."></textarea>
+
+    <label for="proxies">Proxies</label>
+    <textarea id="proxies" class="input-box" placeholder="Enter proxies here..."></textarea>
+
+    <label for="webhook">Discord Webhook URL</label>
+    <input type="text" id="webhook" class="input-box single-line" placeholder="Enter Discord Webhook URL">
+
+    <button class="start-button">Start Checking</button>
+</body>
+</html>
