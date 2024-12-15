@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galactical.xyz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Doto:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Doto', sans-serif;
+            background: radial-gradient(circle, rgba(27,27,55,1) 0%, rgba(5,5,27,1) 100%), url('https://images.unsplash.com/photo-1447433819943-74a20887a3c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .glass-panel h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+            font-family: 'Doto', sans-serif;
+        }
+
+        .input-box {
+            width: 90%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-family: 'Doto', sans-serif;
+            outline: none;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+
+        .input-box::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            font-family: 'Doto', sans-serif;
+        }
+
+        .enter-button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-family: 'Doto', sans-serif;
+            font-weight: bold;
+            background: linear-gradient(135deg, #6d5dfc, #9f85ff);
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .enter-button:hover {
+            background: linear-gradient(135deg, #9f85ff, #6d5dfc);
+            transform: scale(1.05);
+        }
+
+        .enter-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+    <script>
+        function showSessionMismatch() {
+            const input = document.querySelector('.input-box').value;
+            if (input) {
+                alert("Session Mismatch: Contact admin to fix.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="glass-panel">
+        <h1>Enter Credentials:</h1>
+        <input type="text" class="input-box" placeholder="Enter here...">
+        <button class="enter-button" onclick="showSessionMismatch()">Enter</button>
+    </div>
+</body>
+</html>
